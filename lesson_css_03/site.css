@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#top {
+  background-color: #4cab53;
+  color: white;
+  padding: 0.25em;
+  border-radius: 10px;
+}
+
+body {
+  font: 100% Lucida Sans, Verdana;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+  width: 100%;
+  gap: 1rem;
+}
+main h1,
+main h2 {
+  margin: 20px 0;
+  font-size: 2rem;
+}
+
+main div {
+  margin: 30px 0;
+}
+
+p {
+  line-height: 1.7;
+}
+
+a {
+  color: black;
+}
+s nav,
+aside {
+  width: 100%;
+}
+
+header {
+  background-color: #4cab53;
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+#menulist {
+  list-style-type: none;
+  padding: 0;
+  width: 200px;
+}
+
+.menuitem {
+  background-color: #f0efeb;
+  padding: 10px 0px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-weight: 400;
+  color: #514c4c;
+}
+
+.menuitem:hover {
+  background-color: #4cab53;
+  color: white;
+}
+/*---------------------*/
+
+aside {
+  background-color: #32aaff;
+  color: white;
+  padding: 0 10px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+aside h3 {
+  padding: 25px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/*---------------------*/
+
+footer {
+  background-color: #f0efeb;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #222;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,139 @@
+/* Grundlegendes Reset und Basis-Styling */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+/*----------------------------*/
+body {
+ /* Schriftart */
+ font-family: "Helvetica Neue", Arial, sans-serif;
+ /* Schriftgröße */
+ font-size: 1em;
+ line-height: 1.6;
+ /* Farben */
+ color: #333;
+ background-color: #f8f8f8;
+ /* Maximale Breite setzen */
+ max-width: 1200px;
+ /* Zentrieren der Inhalte */
+ margin: 0 auto;
+ /* Innere Abstaende */
+ padding: 0 20px;
+}
+/*----------------------------*/
+/* Header-Styling */
+header {
+ padding: 2rem 0;
+ text-align: center;
+ border-bottom: 1px solid #e0e0e0;
+ margin-bottom: 1.5rem;
+}
+header h1 {
+ font-size: 2.5rem;
+ color: #2c3e50;
+}
+/*----------------------------*/
+/* Navigation */
+nav {
+ margin-bottom: 2rem;
+ background-color: #fff;
+ padding: 1rem;
+ border-radius: 5px;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+ /* Aufzaehlungspunkte deaktivieren */
+ list-style: none;
+}
+nav li {
+ /* Elemente in einer linie anzeigen */
+ display: inline;
+ /* Abstaende */
+ margin: 0 15px;
+}
+/*----------------------------*/
+
+/* Hauptinhalt */
+main {
+ margin-bottom: 2rem;
+}
+/* Artikel-Styling */
+article {
+ background-color: #fff;
+ padding: 2rem;
+ margin-bottom: 2rem;
+ border-radius: 5px;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+article h2 {
+ font-size: 1.8rem;
+ margin-bottom: 0.8rem;
+ color: #2c3e50;
+}
+article h3 {
+ font-size: 1.3rem;
+ margin-bottom: 1rem;
+ color: #3498db;
+}
+article p {
+ margin-bottom: 1rem;
+}
+/*----------------------------*/
+
+/*  Bilder */
+article img {
+ max-width: 100%;
+ max-height: 240px; /* Maximale Höhe begrenzen */
+ object-fit: contain; /* Behält das Seitenverhältnis bei */
+ height: auto;
+ display: block;
+ margin: 0 auto 1.5rem;
+ border-radius: 5px;
+}
+/*----------------------------*/
+
+/* Links */
+a {
+ color: #3498db;
+ text-decoration: none;
+}
+a:hover {
+ color: #2980b9;
+ text-decoration: underline;
+}
+/*----------------------------*/
+
+/* Aside-Bereiche */
+aside {
+ background-color: #f5f5f5;
+ padding: 1.5rem;
+ margin-top: 1.5rem;
+ border-radius: 5px;
+ border-left: 3px solid #3498db;
+}
+aside h2 {
+ font-size: 1.3rem;
+ margin-bottom: 1rem;
+}
+aside ul {
+ list-style-position: inside;
+ margin-left: 1rem;
+}
+aside li {
+ margin-bottom: 0.5rem;
+}
+/*----------------------------*/
+/* Footer */
+footer {
+ text-align: center;
+ padding: 2rem 0;
+ margin-top: 2rem;
+ border-top: 1px solid #e0e0e0;
+ color: #777;
+ font-size: 0.9rem;
+}
+.contact-info {
+ margin-top: 1rem;
+}
+/*----------------------------*/

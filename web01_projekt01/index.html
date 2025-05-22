@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtuelle Bibliothek</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links">
+          <li><a href="#books">📚 &nbsp;Bücher</a></li>
+          <li><a href="autoren.html">💫 &nbsp;Autoren</a></li>
+          <li><a href="contact.html">📩 &nbsp;Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>📚 Virtuelle Bibliothek 📚</h1>
+        <!-- Suchfeld -->
+        <form class="search-form" role="search">
+          <label for="search" class="visually-hidden">Suche:</label>
+          <input
+            type="search"
+            id="search"
+            name="search"
+            placeholder="🔍&nbsp;Suchen..."
+          />
+        </form>
+      </section>
+      <section id="books">
+        <!-- Buch 1 -->
+        <article class="book">
+          <h2>Der Herr der Ringe</h2>
+          <p>
+            <strong>Autor:</strong>
+            <a href="./autoren.html#autor1">J.R.R. Tolkien</a>
+          </p>
+          <img
+            src="src/firstBook.jpeg"
+            alt="Buchcover: Der Herr der Ringe"
+            width="200"
+          />
+          <blockquote>
+            <pre>„Nicht alle, die wandern, sind verloren.“</pre>
+          </blockquote>
+          <p>
+            <a
+              href="https://de.wikipedia.org/wiki/Der_Herr_der_Ringe"
+              target="_blank"
+              >Mehr über das Buch...</a
+            >
+          </p>
+
+          <!-- Weitere Infos zu Autor 2 _ Tolkien -->
+          <aside class="author">
+            <h4>Kurze Biografie:</h4>
+            <div>
+              John Ronald Reuel Tolkien, bekannt als J.R.R. Tolkien, war ein
+              britischer Schriftsteller, Philologe und Hochschullehrer. Er wurde
+              am 3. Januar 1892 in Bloemfontein, Südafrika, geboren und verstarb
+              am 2. September 1973 in Bournemouth, England
+            </div>
+            <h4>Weitere Werke:</h4>
+            <ul>
+              <li>Der Hobbit von J.R.R. Tolkien</li>
+              <li>Der Herr der Ringe: Die Gefährten von J.R.R. Tolkien</li>
+            </ul>
+            <h4>Zitate von J.R.R. Tolkien:</h4>
+            <blockquote>
+              <pre>“In a hole in the ground there lived a hobbit.”</pre>
+              <p>– J.R.R. Tolkien, <cite>The Hobbit</cite></p>
+            </blockquote>
+            <blockquote>
+              <pre>“Not all those who wander are lost.”</pre>
+              <p>
+                – J.R.R. Tolkien,
+                <cite>The Lord of the Rings: The Fellowship of the Ring</cite>
+              </p>
+            </blockquote>
+          </aside>
+        </article>
+
+        <hr />
+
+        <!-- Buch 2 -->
+        <article class="book">
+          <h2>Harry Potter und der Stein der Weisen</h2>
+          <p>
+            <strong>Autor:</strong>
+            <a href="./autoren.html#autor2">J.K. Rowling</a>
+          </p>
+          <img
+            src="src/secondBook.jpeg"
+            alt="Buchcover: Harry Potter und der Stein der Weisen"
+            width="200"
+          />
+          <blockquote>
+            <pre>
+„Es sind unsere Entscheidungen, Harry, die zeigen, wer wir wirklich sind.“</pre
+            >
+          </blockquote>
+          <p>
+            <a
+              href="https://de.wikipedia.org/wiki/Harry_Potter_und_der_Stein_der_Weisenr"
+              target="_blank"
+              >Mehr über das Buch...</a
+            >
+          </p>
+
+          <aside class="author">
+            <h4>Kurze Biografie:</h4>
+            <div>
+              J.K. Rowling ist eine britische Schriftstellerin, die weltweit
+              bekannt wurde durch ihre Harry Potter Buchreihe. Sie wurde am 31.
+              Juli 1965 in Yate, Gloucestershire, England, geboren. Ihr erster
+              Roman "Harry Potter und der Stein der Weisen" wurde 1997
+              veröffentlicht und startete eine der erfolgreichsten Buchreihen
+              aller Zeiten.
+            </div>
+            <h4>Weitere Werke:</h4>
+            <ul>
+              <li>Harry Potter und die Kammer des Schreckens</li>
+              <li>Harry Potter und der Gefangene von Askaban</li>
+              <li>Harry Potter und der Feuerkelch</li>
+            </ul>
+            <h4>Zitate von J.K. Rowling:</h4>
+            <blockquote>
+              <pre>
+“It is our choices, Harry, that show what we truly are, far more than our abilities.”</pre
+              >
+              <p>
+                – J.K. Rowling,
+                <cite>Harry Potter and the Chamber of Secrets</cite>
+              </p>
+            </blockquote>
+            <blockquote>
+              <pre>
+“Happiness can be found, even in the darkest of times, if one only remembers to turn on the light.”</pre
+              >
+              <p>
+                – J.K. Rowling,
+                <cite>Harry Potter and the Prisoner of Azkaban</cite>
+              </p>
+            </blockquote>
+          </aside>
+        </article>
+
+        <hr />
+
+        <!-- Buch 3 -->
+        <article class="book">
+          <h2>Die Schatzinsel</h2>
+          <p>
+            <strong>Autor:</strong>
+            <a href="./autoren.html#autor3">Robert Louis Stevenson</a>
+          </p>
+          <img
+            src="src/thirdBook.jpeg"
+            alt="Buchcover: Die Schatzinsel"
+            width="200"
+          />
+          <blockquote>
+            <pre>
+„Kein Schatz auf Erden kann mit einem Freund verglichen werden.“</pre
+            >
+          </blockquote>
+          <p>
+            <a
+              href="https://de.wikipedia.org/wiki/Die_Schatzinsel"
+              target="_blank"
+              >Mehr über das Buch...</a
+            >
+          </p>
+
+          <aside class="author">
+            <h4>Kurze Biografie:</h4>
+            <div>
+              Robert Louis Stevenson war ein schottischer Schriftsteller, der
+              für Abenteuerromane wie "Die Schatzinsel" und "Dr. Jekyll und Mr.
+              Hyde" bekannt ist. Er wurde am 13. November 1850 in Edinburgh,
+              Schottland, geboren und verstarb am 3. Dezember 1894 in Vailima,
+              Samoa
+            </div>
+            <h4>Weitere Werke:</h4>
+            <ul>
+              <li>Dr. Jekyll und Mr. Hyde</li>
+              <li>Kidnapped – Entführt</li>
+              <li>Catriona</li>
+              <li>Der schwarze Pfeil</li>
+              <li>Die Männer von Tuschil</li>
+              <li>Ein Kapitel für sich (Gedichte)</li>
+              <li>In der Südsee (Reisetagebuch)</li>
+              <li>Die falsche Kiste</li>
+            </ul>
+            <h4>Zitate von Robert Louis Stevenson:</h4>
+            <blockquote>
+              <pre>
+“I kept always two books in my pocket, one to read, one to write in.”</pre
+              >
+              <p>
+                – Robert Louis Stevenson,
+                <cite>Essays in the Art of Writing</cite>
+              </p>
+            </blockquote>
+          </aside>
+        </article>
+
+        <div class="card">
+          <img src="src/firstBook.jpeg" alt="Buchcover: Der Herr der Ringe" />
+          <div class="card-body">
+            <h2 class="card-title">Der Herr der Ringe</h2>
+            <p class="card-text">
+              J.R.R. Tolkien – „Nicht alle, die wandern, sind verloren.“
+            </p>
+            <a
+              href="https://de.wikipedia.org/wiki/Der_Herr_der_Ringe"
+              target="_blank"
+              >Mehr über das Buch...</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="src/firstBook.jpeg" alt="Buchcover: Der Herr der Ringe" />
+          <div class="card-body">
+            <h2 class="card-title">Der Herr der Ringe</h2>
+            <p class="card-author">
+              <strong>Autor:</strong>
+              <a href="./autoren.html#autor1">J.R.R. Tolkien</a>
+            </p>
+            <blockquote class="book-quote">
+              <pre>„Nicht alle, die wandern, sind verloren.“</pre>
+            </blockquote>
+            <p>
+              <a
+                href="https://de.wikipedia.org/wiki/Der_Herr_der_Ringe"
+                target="_blank"
+                >Mehr über das Buch...</a
+              >
+            </p>
+
+            <div class="author-info">
+              <h4>Kurze Biografie:</h4>
+              <p>
+                John Ronald Reuel Tolkien, bekannt als J.R.R. Tolkien, war ein
+                britischer Schriftsteller, Philologe und Hochschullehrer. Er
+                wurde am 3. Januar 1892 in Bloemfontein, Südafrika, geboren und
+                verstarb am 2. September 1973 in Bournemouth, England.
+              </p>
+
+              <h4>Weitere Werke:</h4>
+              <ul>
+                <li>Der Hobbit von J.R.R. Tolkien</li>
+                <li>Der Herr der Ringe: Die Gefährten</li>
+              </ul>
+
+              <h4>Zitate von Tolkien:</h4>
+              <blockquote class="book-quote">
+                <pre>“In a hole in the ground there lived a hobbit.”</pre>
+                <p>– J.R.R. Tolkien, <cite>The Hobbit</cite></p>
+              </blockquote>
+              <blockquote class="book-quote">
+                <pre>“Not all those who wander are lost.”</pre>
+                <p>– J.R.R. Tolkien, <cite>The Fellowship of the Ring</cite></p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Katja Schedlberger – Alle Rechte vorbehalten.</p>
+      <p>Kontakt: <a href="mailto:katja@example.com">katja@example.com</a></p>
+      <nav aria-label="Fußnavigation">
+        <ul>
+          <li>
+            <a href="https://github.com/ekschedl" target="_blank">GitHub</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+          </li>
+          <li><a href="#books">Nach Oben</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontakt – Virtuelle Bibliothek</title>
+</head>
+<body>
+  <header>
+
+  </header>
+  <main>
+
+  <h1>Kontaktformular</h1>
+
+<form action="mailto:katja@example.com" method="POST" enctype="text/plain">
+  <fieldset>
+    <legend>Kontaktformular</legend>
+
+    <label for="thema">Thema:</label>
+    <select name="Thema" id="thema" required>
+      <option value="">Bitte wählen</option>
+      <option>Allgemeine Anfrage</option>
+      <option>Feedback</option>
+      <option>Probleme melden</option>
+      <option>Buchanfrage</option>
+      <option>Marketingangelegenheiten</option>
+      <option>Partnerschaftsanfrage</option>
+      <option>Technischer Support</option>
+      <option>Datenschutzanfrage</option>
+      <option>Sonstiges</option>
+    </select><br><br>
+
+    <label for="vorname">Vorname:</label>
+    <input type="text" name="Vorname" id="vorname" required><br><br>
+
+    <label for="nachname">Nachname:</label>
+    <input type="text" name="Nachname" id="nachname" required><br><br>
+
+    <label for="email">E-Mail:</label>
+    <input type="email" name="E-Mail" id="email" required><br><br>
+
+    <label for="nachricht">Nachricht:</label><br>
+    <textarea name="Nachricht" id="nachricht" rows="5" cols="40" required></textarea><br><br>
+
+    <label>
+      <input type="checkbox" name="Marketing-Zustimmung">
+      Ich stimme zu, dass meine Kontaktdaten zu Marketingzwecken verwendet werden dürfen.
+    </label><br><br>
+
+    <input type="submit" value="Absenden">
+    <input type="reset" value="Zurücksetzen">
+  </fieldset>
+</form>
+</main>
+
+</body>
+</html>

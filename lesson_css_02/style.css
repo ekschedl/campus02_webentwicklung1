@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: pink;
+}
+
+nav {
+  background-color: azure;
+}
+
+main {
+  background-color: darkseagreen;
+}
+
+aside {
+  background-color: bisque;
+}
+
+footer {
+  background-color: pink;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+nav,
+aside,
+main {
+  flex: 1 1 0;
+}
+
+nav,
+side {
+  width: 100%;
+}
