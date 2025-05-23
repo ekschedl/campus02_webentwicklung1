@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+nav,
+ul,
+li {
+  margin: 0;
+}
+body {
+  font-family: Helvetica sans-serif;
+  font-size: 20px;
+}
+
+img {
+  width: 200px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+header {
+  background-color: grey;
+  border-bottom: 2px solid black;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+  height: 70px;
+  align-items: center;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size: 20px;
+}
+nav ul li a:hover {
+  color: aquamarine;
+}
+
+#hero p {
+  display: flex;
+  justify-content: center;
+  min-height: 100px;
+  align-items: center;
+}
+
+#hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/splash-2.png") top center / cover no-repeat;
+  z-index: -1;
+}
+
+.hero-title,
+.hero-text {
+  font-size: 2rem;
+  color: white;
+  background: rgba(0.3, 0.3, 0.3, 0.3);
+  padding: 1rem 2rem;
+}
+.hero-title {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+/* Inhalt */
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+article {
+  background: #dcdcdc;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+article img {
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+article h2 {
+  color: lightslategray;
+  margin-bottom: 0.5rem;
+}
+
+article p {
+  color: lightslategray;
+}
+.content-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #4e3bbe;
+}
+
+.content-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: cornflowerblue;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
