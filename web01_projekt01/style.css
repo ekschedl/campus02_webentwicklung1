@@ -268,10 +268,6 @@ blockquote cite {
   .book_second_part {
     flex: 1;
   }
-
-  .book img {
-    max-width: 100%;
-  }
 }
 
 @media (max-width: 768px) {
@@ -282,11 +278,6 @@ blockquote cite {
 
   .book_first_part {
     align-items: center;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
   }
 }
 
@@ -348,8 +339,6 @@ footer p a[href^="mailto:"]:hover {
   color: #00cc8f;
 }
 /* ========== Kontaktformular Stil ========== */
-
-/* background-color: #00cc8f; */
 
 .contact-wrapper {
   max-width: 700px;
