@@ -4,28 +4,29 @@
     <meta charset="UTF-8" />
     <title>Kontakt – Virtuelle Bibliothek</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body id="top">
     <header>
+      <h1><a href="index.html">E-Bibliothek</a></h1>
       <nav aria-label="Hauptnavigation">
         <ul class="nav-links">
-          <li><a href="#books">📚 &nbsp;Bücher</a></li>
+          <li><a href="index.html">📚 &nbsp;Bücher</a></li>
           <li><a href="autoren.html">💫 &nbsp;Autoren</a></li>
-          <li><a href="contact.html">📩 &nbsp;Kontakt</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <h1>Kontaktformular</h1>
-
+    <main class="contact-wrapper">
+      <h2>Kontaktformular</h2>
       <form
         action="mailto:katja@example.com"
         method="POST"
         enctype="text/plain"
       >
         <fieldset>
-          <legend>Kontaktformular</legend>
-
           <label for="thema">Thema:</label>
           <select name="Thema" id="thema" required>
             <option value="">Bitte wählen</option>
@@ -76,8 +77,8 @@
       </form>
     </main>
     <footer>
-      <p>&copy; 2025 Katja Schedlberger – Alle Rechte vorbehalten.</p>
-      <p>Kontakt: <a href="mailto:katja@example.com">katja@example.com</a></p>
+      <p>&copy; 2025 Virtuelle Bibliothek – Alle Rechte vorbehalten.</p>
+      <p>Kontakt: <a href="mailto:katja@example.com">e-library@gmail.com</a></p>
       <nav aria-label="Fußnavigation">
         <ul>
           <li>
@@ -86,9 +87,9 @@
           <li>
             <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
           </li>
-          <li><a href="#books">Nach Oben</a></li>
         </ul>
       </nav>
     </footer>
+    <a href="#top" class="scroll-to-top" aria-label="Nach oben">↑</a>
   </body>
 </html>
