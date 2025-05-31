@@ -1,28 +1,42 @@
+/* ========== Farbvariablen ========== */
+:root {
+  --primary: #4a90e2;
+  --secondary: #00cc8f;
+  --text: #1a1a1a;
+  --text-light: #555555;
+  --white: #ffffff;
+  --bg: #f4f7fb;
+  --light: #f1f5f9;
+  --hover: rgba(255, 255, 255, 0.2);
+  --border: #ccc;
+}
+
 /* ========== Allgemeine Struktur ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   min-height: 100vh;
-
   scroll-behavior: smooth;
 }
+
 html,
 body {
   width: 100%;
   height: 100%;
   font-family: "Segoe UI", sans-serif;
-  background-color: #f4f7fb;
-  color: #1a1a1a;
+  background-color: var(--bg);
+  color: var(--text);
   line-height: 1.6;
 }
 
 /* ========== Header ========== */
 header {
-  background-color: #4a90e2;
-  color: white;
+  background-color: var(--primary);
+  color: var(--white);
   padding: 1.8rem 1rem;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -37,24 +51,21 @@ h1 {
   letter-spacing: 1.2px;
   text-transform: uppercase;
   text-align: center;
-  color: #ffffff;
+  color: var(--white);
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
   margin-bottom: 1rem;
   cursor: pointer;
 }
 
-h1 a {
-  color: inherit;
-  text-decoration: none;
-  pointer-events: auto;
-}
-
+h1 a,
 h1 a:visited,
 h1 a:active,
 h1 a:hover {
   color: inherit;
   text-decoration: none;
+  pointer-events: auto;
 }
+
 /* ========== Navigation ========== */
 nav ul.nav-links {
   list-style: none;
@@ -66,7 +77,7 @@ nav ul.nav-links {
 }
 
 nav ul.nav-links li a {
-  color: white;
+  color: var(--white);
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 1rem;
@@ -76,15 +87,15 @@ nav ul.nav-links li a {
 }
 
 nav ul.nav-links li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--hover);
 }
 
 /* ========== Suchformular ========== */
 .search-form {
   display: flex;
   justify-content: center;
-  margin: 2rem 1rem;
   align-items: center;
+  margin: 2rem 1rem;
   gap: 1rem;
 }
 
@@ -98,41 +109,36 @@ nav ul.nav-links li a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ========== Überschriften h2-h4 ========== */
+/* ========== Überschriften ========== */
 h2 {
   font-size: 1.7rem;
-  color: #333333;
+  color: #333;
   letter-spacing: 1px;
 }
 
 h3 {
   font-size: 1.5rem;
-  color: #4a90e2;
+  color: var(--primary);
   letter-spacing: 0.8px;
-}
-
-h4 {
-  font-size: 1.2rem;
-  color: #4a90e2;
 }
 
 /* ========== Buchartikel ========== */
 #books {
-  margin: 0px 1rem;
+  margin: 0 1rem;
 }
 
 .book {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   padding: 2rem;
   margin: 2rem auto;
   max-width: 900px;
-  transition: box-shadow 0.3s ease;
   align-items: baseline;
+  transition: box-shadow 0.3s ease;
 }
 
 .book:hover {
@@ -143,14 +149,14 @@ h4 {
 .book ul,
 .book blockquote {
   font-size: 1rem;
-  color: #555555;
+  color: var(--text-light);
 }
 
 .book img {
   width: 200px;
-  margin-bottom: 1rem;
   max-width: 300px;
   height: auto;
+  margin-bottom: 1rem;
   border-radius: 6px;
 }
 
@@ -171,19 +177,20 @@ h4 {
 .author-line span {
   font-weight: 600;
   font-size: 1.2rem;
-  color: #4a90e2;
+  color: var(--primary);
   margin-right: 0.4rem;
 }
 
 .author-line a {
-  color: #1a1a1a;
+  color: var(--text);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
+  font-size: 1.2rem;
 }
 
 .author-line a:hover {
-  color: #4a90e2;
+  color: var(--primary);
   text-decoration: underline;
 }
 
@@ -193,9 +200,11 @@ h4 {
   text-align: left;
 }
 
-.book-link a {
+.book-link a,
+h4 {
   font-weight: 600;
-  color: #4a90e2;
+  color: var(--primary);
+  font-size: 1.2rem;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   position: relative;
@@ -211,7 +220,6 @@ h4 {
   top: 50%;
   transform: translateY(-50%);
   opacity: 0.6;
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .book-link a:hover {
@@ -226,12 +234,12 @@ h4 {
 /* ========== Zitate ========== */
 blockquote {
   position: relative;
-  border-left: 4px solid #00cc8f;
+  border-left: 4px solid var(--secondary);
+  background-color: var(--light);
   padding: 1rem;
   font-style: italic;
   font-family: Georgia, serif;
   font-size: 1.25rem;
-  background-color: #f1f5f9;
 }
 
 blockquote::before {
@@ -240,15 +248,14 @@ blockquote::before {
   left: 0.2rem;
   top: -0.5rem;
   font-size: 2rem;
-  color: #00cc8f;
-  line-height: 1;
+  color: var(--secondary);
 }
 
 blockquote cite {
   display: block;
   margin-top: 1rem;
   font-size: 0.9rem;
-  color: #555;
+  color: var(--text-light);
   text-align: right;
   font-style: normal;
 }
@@ -258,7 +265,7 @@ blockquote cite {
   padding-left: 1.5rem;
 }
 
-/* ========== Responsive Design ========== */
+/* ========== Responsive ========== */
 @media (min-width: 768px) {
   .book {
     flex-direction: row;
@@ -282,28 +289,18 @@ blockquote cite {
 }
 
 /* ========== Footer ========== */
-
-/* ========== Footer ========== */
 footer {
-  background-color: #4a90e2;
-  color: white;
+  background-color: var(--primary);
+  color: var(--white);
   text-align: center;
   padding: 2rem 1rem;
   margin-top: 3rem;
-  font-family: "Segoe UI", sans-serif;
 }
 
 footer p {
   margin: 1rem 0;
   font-size: 0.95rem;
   line-height: 1.5;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
 }
 
 footer nav ul {
@@ -317,7 +314,7 @@ footer nav ul {
 }
 
 footer nav ul li a {
-  color: white;
+  color: var(--white);
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 1rem;
@@ -326,37 +323,41 @@ footer nav ul li a {
 }
 
 footer nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--hover);
 }
 
 footer p a[href^="mailto:"] {
   transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: var(--light);
   border-radius: 6px;
   padding: 0.2rem 0.4rem;
 }
 
 footer p a[href^="mailto:"]:hover {
-  color: #00cc8f;
+  color: var(--secondary);
 }
-/* ========== Kontaktformular Stil ========== */
 
+/* ========== Kontaktformular ========== */
 .contact-wrapper {
   max-width: 700px;
   margin: 3rem auto;
   padding: 2rem;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 10px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
 }
+
 .contact-wrapper h2 {
   text-transform: uppercase;
-  color: #4a90e2;
+  color: var(--primary);
   text-align: center;
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
+
 fieldset {
   border: none;
 }
@@ -366,7 +367,7 @@ fieldset {
   flex-direction: column;
   gap: 0.6rem;
   padding: 1.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   border-radius: 10px;
   background-color: #fafafa;
 }
@@ -375,7 +376,7 @@ label {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: #333333;
+  color: #333;
 }
 
 input[type="text"],
@@ -387,7 +388,7 @@ textarea {
   padding: 0.5rem 0.9rem;
   font-size: 1rem;
   font-family: "Segoe UI", sans-serif;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   border-radius: 6px;
   background-color: #f9f9f9;
   transition: border 0.3s ease;
@@ -396,7 +397,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #4a90e2;
+  border-color: var(--primary);
   background-color: #fff;
   outline: none;
 }
@@ -414,31 +415,30 @@ input[type="checkbox"] {
 
 input[type="submit"],
 input[type="reset"] {
-  background-color: #4a90e2;
-  color: white;
+  background-color: var(--primary);
+  color: var(--white);
   border: none;
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
   border-radius: 25px;
-
   cursor: pointer;
   transition: background-color 0.3s ease;
+  letter-spacing: 1px;
   margin-right: 20px;
 }
 
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-  background-color: #00cc8f;
+  background-color: var(--secondary);
 }
 
-/* ==========  Scroll-to-top ========== */
-
+/* ========== Scroll-to-top ========== */
 .scroll-to-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #00cc8f;
-  color: white;
+  background-color: var(--secondary);
+  color: var(--white);
   font-size: 1.5rem;
   padding: 0.6rem 1rem;
   border-radius: 50%;
@@ -451,26 +451,25 @@ input[type="reset"]:hover {
 }
 
 .scroll-to-top:hover {
-  background-color: #4a90e2;
+  background-color: var(--primary);
   transform: translateY(-4px);
 }
-/* ========== Autoren-Seite ========== */
 
+/* ========== Autoren-Seite ========== */
 .autoren-wrapper {
   max-width: 900px;
   margin: 3rem auto;
   padding: 2rem;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 10px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
   font-family: "Segoe UI", sans-serif;
-  color: #1a1a1a;
-  line-height: 1.6;
+  color: var(--text);
 }
 
 .autoren-wrapper h2 {
   font-size: 1.5rem;
-  color: #4a90e2;
+  color: var(--primary);
   text-align: center;
   margin-bottom: 1.5rem;
   font-family: "Poppins", sans-serif;
@@ -478,7 +477,6 @@ input[type="reset"]:hover {
   text-transform: uppercase;
 }
 
-/* Autoren-Navigation als Buttonliste */
 .autoren-wrapper ul {
   display: flex;
   justify-content: center;
@@ -491,10 +489,10 @@ input[type="reset"]:hover {
 
 .autoren-wrapper ul li a {
   display: inline-block;
-  background-color: #ffffff;
-  color: #4a90e2;
+  background-color: var(--white);
+  color: var(--primary);
   padding: 0.5rem 1.2rem;
-  border: 1px solid #4a90e2;
+  border: 1px solid var(--primary);
   border-radius: 25px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -504,8 +502,8 @@ input[type="reset"]:hover {
 }
 
 .autoren-wrapper ul li a:hover {
-  background-color: #4a90e2;
-  color: white;
+  background-color: var(--primary);
+  color: var(--white);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
@@ -516,7 +514,7 @@ input[type="reset"]:hover {
 
 .autoren-wrapper h3 {
   font-size: 1.5rem;
-  color: #333333;
+  color: #333;
   font-family: "Poppins", sans-serif;
   margin-bottom: 1rem;
 }
