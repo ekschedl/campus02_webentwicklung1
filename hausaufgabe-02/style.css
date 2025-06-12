@@ -1,0 +1,119 @@
+/* ---------- Reset und Grundstyles ----------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ---------- Variablen definieren ----------- */
+
+:root {
+  --primary: #507c3a; /* Hauptgrün (Header, Navigation) */
+  --primary-dark: #2d5016; /* Dunkles Grün (Text, Überschriften) */
+  --primary-light: #a8dba8; /* Helleres Grün (Akzente) */
+  --background-light: #ffffff; /* Hintergrund Content-Bereich */
+  --text-light: #ffffff; /* Heller Text */
+  --text-dark: #000000; /* Dunkler Text */
+}
+
+/* ---------- Header und Hero-Bereich ----------- */
+
+header {
+  background-color: var(--primary);
+  color: var(--background-light);
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.hero {
+  /* Hintergrundbild */
+  background-image: url("images/hero_fullsize.jpg");
+  background-size: cover;
+  background-position: center;
+  /* Flexbox */
+  display: flex;
+  /* Setzt die hohe des hero Bereiches */
+  padding: 10rem 0;
+}
+.hero h2 {
+  /* Abstaende */
+  margin: 1rem 0;
+  padding: 2rem 15rem;
+  /* Zentriert den Text */
+  text-align: center;
+  /* Schriftart und Groesse */
+  font-size: 3rem;
+  color: whitesmoke;
+  /* Hintergrundfarbe */
+  background-color: rgba(0.3, 0.3, 0.3, 0.3);
+}
+
+/* ---------- Content ----------- */
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--primary); /* Hintergrundfarbe für die Navigation */
+}
+
+/* ---------- Nav ----------- */
+
+nav {
+  padding: 1rem;
+  background-color: var(--primary);
+  flex: 0 0 200px; /* Feste Breite, z.B. 200px */
+  min-width: 180px; /* Mindestbreite, damit es früher umbrechen kann */
+  order: 1; /* immer an der ersten Stelle */
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  margin: 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  display: block; /* Blockanzeige für Links */
+  padding: 0.5em 2rem;
+}
+nav a:hover {
+  background-color: var(--primary-light);
+}
+
+/* ---------- Main ----------- */
+
+main {
+  padding: 1rem;
+  order: 2;
+  flex: 1 1 300px; /* Hauptinhalt nimmt übrigen Platz */
+  min-width: 250px;
+  background-color: var(--background-light);
+}
+
+section.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+section.content nav {
+  flex: 0 0 200px;
+  min-width: 180px;
+  order: 1;
+}
+section.content main {
+  flex: 1 1 300px;
+  min-width: 250px;
+  order: 2;
+}
