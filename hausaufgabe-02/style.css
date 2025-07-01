@@ -4,14 +4,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: var(--text-dark);
+  min-width: 250px;
 }
 
 /* ---------- Variablen definieren ----------- */
-
 :root {
   --primary: #507c3a; /* Hauptgrün (Header, Navigation) */
   --primary-dark: #2d5016; /* Dunkles Grün (Text, Überschriften) */
@@ -21,8 +22,7 @@ body {
   --text-dark: #000000; /* Dunkler Text */
 }
 
-/* ---------- Header und Hero-Bereich ----------- */
-
+/* ---------- Header ----------- */
 header {
   background-color: var(--primary);
   color: var(--background-light);
@@ -32,88 +32,111 @@ header {
 
 header h1 {
   font-size: 1.5rem;
-  margin: 0;
 }
 
+/* ---------- Hero-Bereich ----------- */
 .hero {
-  /* Hintergrundbild */
   background-image: url("images/hero_fullsize.jpg");
   background-size: cover;
   background-position: center;
-  /* Flexbox */
   display: flex;
-  /* Setzt die hohe des hero Bereiches */
+  justify-content: center;
+  align-items: center;
   padding: 10rem 0;
 }
+
 .hero h2 {
-  /* Abstaende */
-  margin: 1rem 0;
-  padding: 2rem 15rem;
-  /* Zentriert den Text */
+  margin: 1rem auto;
   text-align: center;
-  /* Schriftart und Groesse */
-  font-size: 3rem;
-  color: whitesmoke;
-  /* Hintergrundfarbe */
-  background-color: rgba(0.3, 0.3, 0.3, 0.3);
+  color: var(--text-light);
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  font-size: 2.5rem;
+  padding: 1rem 0.5rem;
 }
 
-/* ---------- Content ----------- */
+/* ---------- Überschriften Farben ----------- */
+h2,
+h3 {
+  color: var(--primary);
+  padding: 0.5rem 0;
+}
 
+/* ---------- Content-Bereich ----------- */
 .content {
   display: flex;
   flex-wrap: wrap;
-  background-color: var(--primary); /* Hintergrundfarbe für die Navigation */
+  background-color: var(--primary);
 }
 
-/* ---------- Nav ----------- */
-
+/* ---------- Navigation ----------- */
 nav {
   padding: 1rem;
-  background-color: var(--primary);
-  flex: 0 0 200px; /* Feste Breite, z.B. 200px */
-  min-width: 180px; /* Mindestbreite, damit es früher umbrechen kann */
-  order: 1; /* immer an der ersten Stelle */
 }
+
 nav ul {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
-nav li {
-  margin: 0;
-}
+
 nav a {
-  color: white;
+  color: var(--background-light);
   text-decoration: none;
-  display: block; /* Blockanzeige für Links */
+  display: block;
   padding: 0.5em 2rem;
 }
+
 nav a:hover {
   background-color: var(--primary-light);
 }
 
-/* ---------- Main ----------- */
-
+/* ---------- Main-Bereich ----------- */
 main {
   padding: 1rem;
-  order: 2;
-  flex: 1 1 300px; /* Hauptinhalt nimmt übrigen Platz */
+  flex: 1 1 300px;
   min-width: 250px;
   background-color: var(--background-light);
 }
 
-section.content {
+/* ---------- Produkte ----------- */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.product-item {
+  background-color: var(--background-light);
+  border: 1px solid rgb(0 0 0 / 16%);
+  border-radius: 5px;
+  text-align: center;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
-section.content nav {
-  flex: 0 0 200px;
-  min-width: 180px;
-  order: 1;
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
-section.content main {
-  flex: 1 1 300px;
-  min-width: 250px;
-  order: 2;
+
+.product-item p {
+  padding: 0 1rem 0.5rem 1rem;
+  text-align: start;
+}
+
+/* ---------- Footer ----------- */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+}
+
+footer p {
+  padding: 0 0 2rem;
+  line-height: 1.2rem;
+}
+
+footer p a {
+  color: var(--text-dark);
+  text-decoration: none;
 }

@@ -1,0 +1,142 @@
+/* ---------- Reset und Grundstyles ----------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  min-width: 250px;
+}
+
+/* ---------- Variablen definieren ----------- */
+:root {
+  --primary: #507c3a; /* Hauptgrün (Header, Navigation) */
+  --primary-dark: #2d5016; /* Dunkles Grün (Text, Überschriften) */
+  --primary-light: #a8dba8; /* Helleres Grün (Akzente) */
+  --background-light: #ffffff; /* Hintergrund Content-Bereich */
+  --text-light: #ffffff; /* Heller Text */
+  --text-dark: #000000; /* Dunkler Text */
+}
+
+/* ---------- Header ----------- */
+header {
+  background-color: var(--primary);
+  color: var(--background-light);
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* ---------- Hero-Bereich ----------- */
+.hero {
+  background-image: url("images/hero_fullsize.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0;
+}
+
+.hero h2 {
+  margin: 1rem auto;
+  text-align: center;
+  color: var(--text-light);
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  font-size: 2.5rem;
+  padding: 1rem 0.5rem;
+}
+
+/* ---------- Überschriften Farben ----------- */
+h2,
+h3 {
+  color: var(--primary);
+  padding: 0.5rem 0;
+}
+
+/* ---------- Content-Bereich ----------- */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--primary);
+}
+
+/* ---------- Navigation ----------- */
+nav {
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav a {
+  color: var(--background-light);
+  text-decoration: none;
+  display: block;
+  padding: 0.5em 2rem;
+}
+
+nav a:hover {
+  background-color: var(--primary-light);
+}
+
+/* ---------- Main-Bereich ----------- */
+main {
+  padding: 1rem;
+  flex: 1 1 300px;
+  min-width: 250px;
+  background-color: var(--background-light);
+}
+
+/* ---------- Produkte ----------- */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.product-item {
+  background-color: var(--background-light);
+  border: 1px solid rgb(0 0 0 / 16%);
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-item p {
+  padding: 0 1rem 0.5rem 1rem;
+  text-align: start;
+}
+
+/* ---------- Footer ----------- */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+}
+
+footer p {
+  padding: 0 0 2rem;
+  line-height: 1.2rem;
+}
+
+footer p a {
+  color: var(--text-dark);
+  text-decoration: none;
+}
